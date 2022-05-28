@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'org.gretty' version '3.0.7'
+    id 'war'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    compileOnly group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.3'
+    implementation group: 'mysql', name:'mysql-connector-java', version:'8.0.29'
+    implementation group: 'javax.servlet', name:'jstl', version:'1.2'
+}
+
+test {
+    useJUnitPlatform()
+}

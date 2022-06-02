@@ -1,4 +1,4 @@
-package ru.shop.helper;
+package ru.shop.helper.getCollection;
 import ru.shop.models.Habar;
 import java.sql.ResultSet;
 import java.sql.SQLException;

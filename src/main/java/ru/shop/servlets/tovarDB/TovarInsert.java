@@ -22,7 +22,6 @@ public class TovarInsert extends HttpServlet {
             Statement st = connection.createStatement();
             st.executeUpdate("INSERT INTO tovar (name,type,cost,weight,rare) VALUES("+ "\"" + tovar_name+ "\","+ "\"" + tovar_type +
                     "\"," + tovar_cost + "," + tovar_weight+ ","+ "\"" +tovar_rare+"\"" +");");
-            connection.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

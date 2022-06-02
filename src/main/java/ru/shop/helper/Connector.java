@@ -9,7 +9,8 @@ import java.util.Properties;
 public  class Connector {
     private static Connection conn = null;
     private Connector(){}
-      public static synchronized Connection getConn() throws IOException {
+    //Синхронизация?
+    public static synchronized Connection getConn() throws IOException {
           Properties data = new Properties();
           try  {
               if  (conn == null) {

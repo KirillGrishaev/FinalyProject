@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/admin/admin_view_all_client.jsp" value="file://$PROJECT_DIR$/src/main/webapp/admin" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/client/tovar_catalog.jsp" value="file://$PROJECT_DIR$/src/main/webapp/client" />
       </map>
     </option>
   </component>

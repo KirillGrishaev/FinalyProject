@@ -1,4 +1,4 @@
-package ru.shop.helper;
+package ru.shop.helper.getCollection;
 
 import ru.shop.models.Client;
 import java.sql.ResultSet;

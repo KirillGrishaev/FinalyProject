@@ -16,6 +16,8 @@ public class DbToCollectClient {
             client.setName(rs.getString("NAME"));
             client.setLogin(rs.getString("LOGIN"));
             client.setPassword(rs.getString("PASSWORD"));
+            client.setMoney(rs.getInt("MONEY"));
+            client.setRole(rs.getInt("ROLE"));
             clientList.add(client);
         }return (ArrayList) clientList;
     }

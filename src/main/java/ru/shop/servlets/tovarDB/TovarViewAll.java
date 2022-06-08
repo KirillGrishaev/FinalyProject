@@ -12,9 +12,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-@WebServlet(urlPatterns = "/tovarViewAll")
+@WebServlet(urlPatterns = "/clientLogin/admin/tovarViewAll")
 public class TovarViewAll extends HttpServlet {
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         try{
             Connection connection = Connector.getConn();
             Statement st = connection.createStatement();
@@ -22,6 +22,7 @@ public class TovarViewAll extends HttpServlet {
             req.setAttribute("tovarList", tovarList);
             getServletContext().getRequestDispatcher("/admin/admin_view_all_tovar.jsp").forward(req,resp);
         } catch (SQLException | ServletException e) {
+            req.getServletContext().getRequestDispatcher("/client/login/error.jsp").forward(req,resp);
             throw new RuntimeException(e);
         }
     }
